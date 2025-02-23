@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.6.4.1 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre class="western">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Hormonal Disorder Assessment&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .progress-container {
+            width: 100%;
+            background: #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 10px;
+            background: #28a745;
+            border-radius: 5px;
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffeb3b;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;h2&gt;Hormonal Disorder Assessment&lt;/h2&gt;
+
+    &lt;div class=&quot;progress-container&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot; id=&quot;progressBar&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;form id=&quot;hormoneForm&quot;&gt;
+        &lt;div class=&quot;question active&quot;&gt;
+            &lt;label&gt;1. Do you feel excessively tired or weak most of the time?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;2. Have you noticed unexplained weight gain or weight loss?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;3. Do you experience frequent mood swings, anxiety, or depression?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Thyroid --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;4. Do you feel excessively cold (Hypothyroidism) or hot (Hyperthyroidism)?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Diabetes --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;5. Do you feel extremely thirsty and need to urinate frequently?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- PCOS --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;6. Do you have irregular or missed periods? (For Women)&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Cushing’s Syndrome --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;7. Have you gained weight primarily in your face, neck, or abdomen?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Addison’s Disease --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;8. Do you feel chronically tired, weak, or lightheaded?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Growth Hormone Deficiency --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;9. Were you significantly shorter than your peers in childhood?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Hypogonadism --&gt;
+        &lt;div class=&quot;question&quot;&gt;
+            &lt;label&gt;10. Do you have low libido or sexual dysfunction?&lt;/label&gt;
+            &lt;select class=&quot;answer&quot;&gt;&lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;&lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;&lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;buttons&quot;&gt;
+            &lt;button type=&quot;button&quot; onclick=&quot;prevQuestion()&quot; id=&quot;prevBtn&quot; disabled&gt;Previous&lt;/button&gt;
+            &lt;button type=&quot;button&quot; onclick=&quot;nextQuestion()&quot;&gt;Next&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+
+    &lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let currentQuestion = 0;
+    const questions = document.querySelectorAll(&quot;.question&quot;);
+    const progressBar = document.getElementById(&quot;progressBar&quot;);
+    const totalQuestions = questions.length;
+
+    function showQuestion(index) {
+        questions.forEach((q, i) =&gt; q.classList.toggle(&quot;active&quot;, i === index));
+        progressBar.style.width = ((index + 1) / totalQuestions) * 100 + &quot;%&quot;;
+    }
+
+    function nextQuestion() {
+        if (currentQuestion &lt; totalQuestions - 1) {
+            currentQuestion++;
+            showQuestion(currentQuestion);
+        } else {
+            analyzeResults();
+        }
+        document.getElementById(&quot;prevBtn&quot;).disabled = currentQuestion === 0;
+    }
+
+    function prevQuestion() {
+        if (currentQuestion &gt; 0) {
+            currentQuestion--;
+            showQuestion(currentQuestion);
+        }
+        document.getElementById(&quot;prevBtn&quot;).disabled = currentQuestion === 0;
+    }
+
+    function analyzeResults() {
+        let answers = document.querySelectorAll(&quot;.answer&quot;);
+        let results = [];
+
+        let responses = Array.from(answers).map(a =&gt; a.value);
+
+        if (responses[0] === &quot;yes&quot; &amp;&amp; responses[1] === &quot;yes&quot;) results.push(&quot;Possible Thyroid Disorder&quot;);
+        if (responses[4] === &quot;yes&quot;) results.push(&quot;Possible Diabetes&quot;);
+        if (responses[5] === &quot;yes&quot; &amp;&amp; responses[6] === &quot;yes&quot;) results.push(&quot;Possible PCOS&quot;);
+        if (responses[7] === &quot;yes&quot;) results.push(&quot;Possible Cushing’s Syndrome&quot;);
+        if (responses[8] === &quot;yes&quot;) results.push(&quot;Possible Addison’s Disease&quot;);
+        if (responses[9] === &quot;yes&quot;) results.push(&quot;Possible Growth Hormone Deficiency&quot;);
+        if (responses[10] === &quot;yes&quot;) results.push(&quot;Possible Hypogonadism&quot;);
+
+        document.getElementById(&quot;result&quot;).style.display = &quot;block&quot;;
+        document.getElementById(&quot;result&quot;).innerHTML = results.length ? &quot;Possible Conditions: &lt;br&gt;&quot; + results.join(&quot;&lt;br&gt;&quot;) : &quot;No major disorder detected.&quot;;
+    }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
